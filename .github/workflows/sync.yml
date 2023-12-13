@@ -2,10 +2,14 @@
 name: github -- Gitee
 # 触发条件
 on:
+    # 允许您从“操作”选项卡手动运行此工作流
+  workflow_dispatch:
   push:
     branches: ["master","main"]
-  # 允许您从“操作”选项卡手动运行此工作流
-  workflow_dispatch:
+
+  # schedule:
+  #   # 定时任务，在每天的24点 18点推送签到信息到邮箱
+  #   - cron:  0 16 * * * 
 
 
   # Allows you to run this workflow manually from the Actions tab
@@ -44,7 +48,8 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload entire repository
-          path: '/docs'
+          path: 'docs'
+          # 部署到GitHub页面
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
