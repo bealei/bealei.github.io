@@ -13,13 +13,16 @@ on:
   # workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# 设置GITHUB_TOKEN的权限以允许部署到GITHUB页面
 permissions:
   contents: read
   pages: write
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# 只允许一次并发部署，跳过在进行中的运行和最近排队的运行之间排队的运行。
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# 但是，不要取消正在进行的运行，因为我们希望完成这些生产部署。
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -41,7 +44,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload entire repository
-          path: '.'
+          path: './docs'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
