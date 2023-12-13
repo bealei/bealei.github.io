@@ -2,8 +2,7 @@
 name: github -- Gitee
 # 触发条件
 on:
-    # 允许您从“操作”选项卡手动运行此工作流
-  workflow_dispatch:
+
   push:
     branches: ["master","main"]
 
@@ -11,55 +10,46 @@ on:
   #   # 定时任务，在每天的24点 18点推送签到信息到邮箱
   #   - cron:  0 16 * * * 
 
-
-  # Allows you to run this workflow manually from the Actions tab
   # 允许您从“操作”选项卡手动运行此工作流
-  # workflow_dispatch:
+  workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+
 # 设置GITHUB_TOKEN的权限以允许部署到GITHUB页面
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # 只允许一次并发部署，跳过在进行中的运行和最近排队的运行之间排队的运行。
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 # 但是，不要取消正在进行的运行，因为我们希望完成这些生产部署。
 concurrency:
   group: "pages"
   cancel-in-progress: false
 # 任务
 jobs:
-  # Single deploy job since we're just deploying
-  # 单一部署作业，因为我们只是在部署
-  deploy:
+
+  
+  deploy: # 单一部署作业，因为我们只是在部署
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
+    steps:    
+      - name: Checkout  # 检验
+        uses: actions/checkout@v3     
+      - name: Setup Pages # 设置页面
+        uses: actions/configure-pages@v3        
+      - name: Upload artifact # 上传工件
         uses: actions/upload-pages-artifact@v2
         with:
-          # Upload entire repository
+          # 部署的指定文件夹
           path: 'docs'
-          # 部署到GitHub页面
-      - name: Deploy to GitHub Pages
+          # 上传整个存储库
+          # path: '.'
+      - name: Deploy to GitHub Pages  # 部署到GitHub页面
         id: deployment
         uses: actions/deploy-pages@v2
-      #   # 部署文档
-      # - name: bushuwendang
-      #   uses: JamesIves/github-pages-deploy-action@v4
-      #   with:
-      #     # 这是文档部署到的分支名称
-      #     branch: master
-      #     folder: docs
+ 
 
 
         
