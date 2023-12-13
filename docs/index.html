@@ -5,43 +5,49 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport"
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
-
-	<title>GuaiOK</title>
+	<title>庄磊 zhuanglei</title>
+	<!--seo关键词-->
+	<meta name="Keywords" content="庄磊,zhuanglei,bealei" />
+	<!--seo一段描述-->
+	<meta name="Description" content="庄磊 zhuanglei 个人官方网站主页。网址：www.zhuanglei.top " />
+	<!--网站作者-->
+	<meta name="author" content="zhuanglei" />
+	<!--网站版权-->
+	<meta name="copyright" content="bealei" />
 	<!-- 网站主页必须引入 -->
-	<script src="domain.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./static/js/domain.js"></script>
+	<script src="./static/js/tongji.js"></script>
 	<style>
-		body {
-			background-color: #f3f6f9;
-		}
-
-		a {
+		* {
+			margin: 0;
+			padding: 0;
 			text-decoration: none;
+			list-style: none;
+			box-sizing: border-box;
 		}
 
-		li {
-			list-style: none;
+		.container {
+			background-color: #f3f6f9;
+			overflow: hidden;
 		}
 
 		main {
-			width: 500px;
-			margin: 0 auto;
-			text-align: center;
-			margin-top: 18%;
-		}
-
-		main h2 {
-			font-size: 56px;
-
+			width: 100%;
+			height: 90vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 		main h1 {
+			font-size: 3rem;
 			background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 33.3%, rgba(252, 176, 69, 1) 66.6%, rgba(131, 58, 180, 1) 100%);
 			-webkit-background-clip: text;
 			/*截取背景区域为文字*/
 			color: transparent;
 			background-size: 300% 100%;
 			/*扩大背景区域*/
-			animation: text 4s infinite linear;
+			animation: text 5s infinite linear;
 		}
 
 		@keyframes text {
@@ -56,46 +62,63 @@
 
 		footer {
 			width: 100%;
-			height: 50px;
-			position: fixed;
-			bottom: 0;
-			text-align: center;
-
+			height: 10vh;
+			/* position: fixed;
+			bottom: 0; */
+			color: #369;
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
 		}
 
 		footer a {
-			color: #abc;
+			color: #369;
 		}
 
-		footer ul {
-			color: #abc;
-			display: flex;
-			justify-content: center;
-		}
-
-		footer li:first-child {
-			border-right: 1px solid #abc;
-		}
-
-		footer li {
-			padding: 0 7px;
-
+		footer #showdate,
+		footer a {
+			font-weight: 700;
+			color: #123;
 		}
 	</style>
+	<!-- 百度统计 -->
+	<script>
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?a9c9c97882153aa317ef84694c5d480f";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	<!-- 51la -->
+	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+	<script>LA.init({ id: "KFa1wL1ulcP6daGk", ck: "KFa1wL1ulcP6daGk" })</script>
 </head>
 
 <body>
-	<main>
-		<h2>Hello World !</h2>
-		<h1>master docs 里面</h1>
-	</main>
+	<div class="container">
+		<main>
+			<h1>Hello World !</h1>
+		</main>
 
-	<footer>
-		<ul>
-			<li><a href="http://bealei.com" target="_blank">bealei</a></li>
-			<li>版权所有</li>
-		</ul>
-	</footer>
+		<footer>
+			<p>本网站已安全运行：<span id="showdate"></span>天 &nbsp;|&nbsp;
+				<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8"
+					src="https://v6-widget.51.la/v6/KFa1wL1ulcP6daGk/quote.js?theme=,,#336699,#112233,,,16&f=14&display=0,0,0,0,0,0,0,1"></script>
+			</p>
+			<p>Copyright &copy; 2023 &nbsp; <a href="http://bealei.com">bealei</a> &nbsp;All Rights Reserved.
+			</p>
+
+		</footer>
+	</div>
+
+
+	<script>
+
+	</script>
 </body>
+<script src="./static/js/chajian.js" type="text/javascript" charset="utf-8"></script>
 
 </html>
