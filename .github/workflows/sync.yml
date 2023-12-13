@@ -3,7 +3,7 @@ name: github -- Gitee
 # 触发条件
 on:
   push:
-    branches: ["master"]
+    branches: ["master","main"]
   # 允许您从“操作”选项卡手动运行此工作流
   workflow_dispatch:
 
