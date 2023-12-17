@@ -23,7 +23,7 @@ body {
     /* 解决文字变大 */
     max-height: 9999px;
     box-sizing: border-box;
-
+    user-select: none;
 
 }
 
@@ -112,14 +112,14 @@ body {
     position: absolute;
     width: 100%;
     color: var(--text-bg);
-    font-size: 155px;
-    letter-spacing: 5px;
-    font-weight: bold;
+    font-size: 144px;
+    letter-spacing: 0px;
+    font-weight: 700;
     /* 无法选中 */
     user-select: none;
-    top: 0;
-    font-family: "隶书";
+    top: -16px;
     z-index: -1;
+    font-family: serif;
 }
 
 /* 头像包裹*/

@@ -3,6 +3,8 @@
   --page-bg: #bbccdd;
   --page-bg: #fff;
   // --line-bg: #e4bdbdf8;
+
+  --h1-color: #123;
   --line-color: #000;
   // 标题
   --h2-bg: #fff;
@@ -10,6 +12,7 @@
   --h2-color: #1994ff;
   // 模块
   --module-bg: #fafafa;
+  --module-bg: #fafbfc;
   --module-border: #ccc;
   --module-border: transparent;
   // 模块标题
@@ -17,8 +20,9 @@
   --h3-bg: transparent;
   --h3-bg-2n: red;
   --h3-bg-2n: transparent;
-  --h3-color: #123;
-  --p-color: #456;
+  --h3-color: #456;
+  --p-color: #789;
+  --span-color: #abc;
 
   // 三角形
   --sanjiao-color: blue;
@@ -46,8 +50,6 @@
   // 自定义调节
   --mb-size: 2rem;
   --font-family: sans-serif;
-  --footer-color: #369;
-
 }
 
 
@@ -76,6 +78,7 @@
   list-style: none;
   text-decoration: none;
   user-select: none;
+  font-family: sans-serif;
 }
 
 *,
@@ -96,8 +99,6 @@ body {
   background-size: cover;
   line-height: 1.5;
   font-family: var(--font-family);
-
-
 }
 
 h1 {
@@ -118,6 +119,10 @@ p {
   font-size: 16px;
   word-wrap: break-word;
   word-break: break-all;
+}
+
+p>span {
+  font-size: 14px;
 }
 
 .container {
@@ -255,9 +260,6 @@ header {
       }
 
 
-
-
-
       h3 {
         background: var(--h3-bg);
         color: var(--h3-color);
@@ -265,11 +267,11 @@ header {
         position: relative;
       }
 
+      p>span {
+        color: var(--span-color);
+      }
+
     }
-
-
-
-
 
 
   }
@@ -297,42 +299,45 @@ header {
       border-radius: 8px;
       z-index: 999;
 
+      &:hover {
+        color: var(--h2-bg);
+        background-color: var(--h2-color);
+      }
+
     }
 
-
+    // h2
   }
 
-
+  // .year-title
 
 }
 
 // 时间轴结束-- ---------------
 
-
-
 footer {
-  height: 30px;
-  line-height: 30px;
+  --footer-color: #369;
+  --foot-hight: 30px;
+  --footer-fz: 18px;
+  height: var(--foot-hight);
+  line-height: var(--foot-hight);
+  font-size: var(--footer-fz);
   text-align: center;
   color: var(--footer-color);
-  // border: 1px solid red;
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 4px;
+
+      a {
+        color: var(--footer-color);
+      }
+    }
+  }
 }
-
-footer a {
-  color: var(--footer-color);
-}
-
-footer ul {
-  display: flex;
-  justify-content: center;
-}
-
-footer ul li {
-  margin: 0 4px;
-}
-
-
-
 
 
 

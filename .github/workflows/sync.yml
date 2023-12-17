@@ -53,7 +53,7 @@ jobs:
 
 
         
-  build:
+  git-mirror:
     # 服务器环境：最新版 Ubuntu
     runs-on: ubuntu-latest
     # 步骤

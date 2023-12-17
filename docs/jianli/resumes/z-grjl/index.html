@@ -16,72 +16,96 @@
 
 
   <div class="container" id="app">
-
+    <!-- ------------------------ 头部 ------------------------ -->
     <header>
-
       <h1 class="project-name">{{datas.other.title}}</h1>
       <p>{{datas.other.text}}</p>
-
     </header>
 
-
-
+    <!-- ------------ 时间线 ------------ -->
     <main id="timeline">
-
-
-
+      <!-- ------- 模块 start------- -->
+      <!-- 标题 -->
       <div class=" year-title">
         <h2>{{datas.chusheng.title}}</h2>
       </div>
+      <!-- 内容 -->
       <div class="timeline-item" v-for="(item, index) in datas.chusheng.data" :key="index">
         <div class="timeline-content">
           <h3>{{item.time}}</h3>
           <p>{{item.text}}</p>
+          <p><span>{{item.note}}</span></p>
         </div>
       </div>
-
-
+      <!-- ------- 模块 end------- -->
+      <!-- ------- 模块 start------- -->
       <div class=" year-title">
         <h2>{{datas.shangxue.title}}</h2>
       </div>
+      <!-- 内容 -->
       <div class="timeline-item" v-for="(item, index) in datas.shangxue.data" :key="index">
         <div class="timeline-content">
           <h3>{{item.time}}</h3>
           <p>{{item.text}}</p>
+          <p><span>{{item.note}}</span></p>
         </div>
       </div>
-
+      <!-- ------- 模块 end------- -->
+      <!-- ------- 模块 start------- -->
       <div class=" year-title">
         <h2>{{datas.budui.title}}</h2>
       </div>
+      <!-- 内容 -->
       <div class="timeline-item" v-for="(item, index) in datas.budui.data" :key="index">
         <div class="timeline-content">
           <h3>{{item.time}}</h3>
           <p>{{item.text}}</p>
+          <p><span>{{item.note}}</span></p>
         </div>
       </div>
+      <!-- ------- 模块 end------- -->
 
+      <!-- ------- 模块 start------- -->
+      <div class=" year-title">
+        <h2>{{datas.daxue.title}}</h2>
+      </div>
+      <!-- 内容 -->
+      <div class="timeline-item" v-for="(item, index) in datas.daxue.data" :key="index">
+        <div class="timeline-content">
+          <h3>{{item.time}}</h3>
+          <p>{{item.text}}</p>
+          <p><span>{{item.note}}</span></p>
+        </div>
+      </div>
+      <!-- ------- 模块 end------- -->
 
+      <!-- ------- 模块 start------- -->
       <div class=" year-title">
         <h2>{{datas.gongzuo.title}}</h2>
       </div>
+      <!-- 内容 -->
       <div class="timeline-item" v-for="(item, index) in datas.gongzuo.data" :key="index">
         <div class="timeline-content">
           <h3>{{item.time}}</h3>
           <p>{{item.text}}</p>
+          <p><span>{{item.note}}</span></p>
         </div>
       </div>
+      <!-- ------- 模块 end------- -->
 
-
+      <!-- ------- 模块 start------- -->
       <div class=" year-title">
         <h2>{{datas.aa.title}}</h2>
       </div>
+      <!-- 内容 -->
       <div class="timeline-item" v-for="(item, index) in datas.aa.data" :key="index">
         <div class="timeline-content">
           <h3>{{item.time}}</h3>
           <p>{{item.text}}</p>
+          <p><span>{{item.note}}</span></p>
         </div>
       </div>
+      <!-- ------- 模块 end------- -->
 
 
 
@@ -93,8 +117,8 @@
     <footer class="resume-foot">
       <ul>
         <li>&copy;</li>
-        <li><a href="//bealei.com">bealei</a></li>
-        <li>by</li>
+        <!-- <li><a href="//bealei.com">bealei</a></li>
+        <li>by</li> -->
         <li><a href="//zhuanglei.top">zhuanglei</a></li>
       </ul>
     </footer>

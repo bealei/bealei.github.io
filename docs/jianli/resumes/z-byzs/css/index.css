@@ -37,6 +37,8 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  user-select: none;
+  font-family: sans-serif;
 }
 
 html {
@@ -156,18 +158,33 @@ main img {
   padding: 58px 0;
 }
 
-/* ------------------------ 底部 ------------------------ */
+/* ------------------------ 底部 start------------------------ */
 footer {
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  font-size: 24px;
-  color: #369;
-}
+  --footer-color: #369;
+  --foot-hight:48px;
+  --footer-fz:18px;
 
-footer a {
-  color: #369;
+  height: var(--foot-hight);
+  line-height: var(--foot-hight);
+  font-size: var(--footer-fz);
+  text-align: center;
+  color: var(--footer-color);
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 4px;
+
+      a {
+        color: var(--footer-color);
+      }   
+    } 
+  }
 }
+/* ------------------------ 底部 end ------------------------ */
+
 
 /* ------------------------ 侧边栏 ------------------------ */
 aside {

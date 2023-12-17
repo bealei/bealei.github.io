@@ -2,19 +2,22 @@
   --body-bg: #f1f2f3;
   --page-bg: #bbccdd;
   --page-bg: #fff;
+  --h1-color: #123;
   --line-color: #000;
   --h2-bg: #fff;
   --h2-border: #1994ff;
   --h2-color: #1994ff;
   --module-bg: #fafafa;
+  --module-bg: #fafbfc;
   --module-border: #ccc;
   --module-border: transparent;
   --h3-bg: blue;
   --h3-bg: transparent;
   --h3-bg-2n: red;
   --h3-bg-2n: transparent;
-  --h3-color: #123;
-  --p-color: #456;
+  --h3-color: #456;
+  --p-color: #789;
+  --span-color: #abc;
   --sanjiao-color: blue;
   --sanjiao-color: #fff;
   --sanjiao-color: var(--module-bg);
@@ -35,7 +38,6 @@
   --big-circle-border-size: 6px;
   --mb-size: 2rem;
   --font-family: sans-serif;
-  --footer-color: #369;
 }
 
 .clearfix:after, #timeline .timeline-item:after, .clearfix:before, #timeline .timeline-item:before {
@@ -51,6 +53,7 @@
   list-style: none;
   text-decoration: none;
   user-select: none;
+  font-family: sans-serif;
 }
 
 *,
@@ -91,6 +94,10 @@ p {
   font-size: 16px;
   word-wrap: break-word;
   word-break: break-all;
+}
+
+p > span {
+  font-size: 14px;
 }
 
 .container {
@@ -231,6 +238,10 @@ header p {
   position: relative;
 }
 
+#timeline .timeline-item .timeline-content p > span {
+  color: var(--span-color);
+}
+
 #timeline .year-title {
   text-align: center;
   margin-bottom: var(--mb-size);
@@ -247,14 +258,19 @@ header p {
   z-index: 999;
 }
 
-footer {
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  color: var(--footer-color);
+#timeline .year-title h2:hover {
+  color: var(--h2-bg);
+  background-color: var(--h2-color);
 }
 
-footer a {
+footer {
+  --footer-color: #369;
+  --foot-hight: 30px;
+  --footer-fz: 18px;
+  height: var(--foot-hight);
+  line-height: var(--foot-hight);
+  font-size: var(--footer-fz);
+  text-align: center;
   color: var(--footer-color);
 }
 
@@ -265,6 +281,10 @@ footer ul {
 
 footer ul li {
   margin: 0 4px;
+}
+
+footer ul li a {
+  color: var(--footer-color);
 }
 
 @media screen and (max-width: 768px) {
