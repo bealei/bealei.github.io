@@ -12,7 +12,7 @@
 
 01、DOWNLOADS 下载
 
-![1](MySQL使用教程.assets\1.png)
+![1](./MySQL使用教程.assets\1.png)
 
 
 
@@ -20,7 +20,7 @@
 
 
 
-![2]( MySQL使用教程.assets\IMG_2021-10-12_170916.png)
+![2]( /MySQL使用教程.assets\IMG_2021-10-12_170916.png)
 
 
 
