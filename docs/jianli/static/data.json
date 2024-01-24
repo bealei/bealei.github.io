@@ -115,12 +115,16 @@
                         "path": "./resumes/jianli-v5.0/index.html"
                     },
                     {
-                        "name": "v5.0-2023.08",
-                        "path": "./resumes/jianli-v5.0-2023.08/index.html"
+                        "name": "v5.0-2023",
+                        "path": "./resumes/jianli-v5.0-2023/index.html"
                     },
                     {
-                        "name": "v5.0-2023.09",
-                        "path": "./resumes/jianli-v5.0-2023.09/index.html"
+                        "name": "v5.0-2024",
+                        "path": "./resumes/jianli-v5.0-2024/index.html"
+                    },
+                    {
+                        "name": "v5.1",
+                        "path": "./resumes/jianli-v5.1/index.html"
                     }
                 ]
             }
